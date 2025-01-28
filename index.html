@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的大学生活记录</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>我的大学时光</h1>
+        <nav>
+            <button id="addMemoryBtn">添加新记忆</button>
+            <select id="filterYear">
+                <option value="all">所有年级</option>
+                <option value="1">大一</option>
+                <option value="2">大二</option>
+                <option value="3">大三</option>
+                <option value="4">大四</option>
+            </select>
+        </nav>
+    </header>
+
+    <main>
+        <div id="memoriesContainer" class="memories-grid"></div>
+    </main>
+
+    <!-- 添加记忆的弹窗 -->
+    <div id="addMemoryModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>添加新记忆</h2>
+            <form id="memoryForm">
+                <input type="text" id="title" placeholder="标题" required>
+                <textarea id="description" placeholder="描述这个美好时刻..." required></textarea>
+                <input type="date" id="date" required>
+                <select id="grade" required>
+                    <option value="1">大一</option>
+                    <option value="2">大二</option>
+                    <option value="3">大三</option>
+                    <option value="4">大四</option>
+                </select>
+                <input type="file" id="image" accept="image/*" required>
+                <button type="submit">保存记忆</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
